@@ -40,6 +40,7 @@ class DrawerContent extends React.Component {
     }
     }
   }
+
   _renderMenuItem = (cell) => {
     const item = cell.item
     const index = cell.index
@@ -54,10 +55,11 @@ class DrawerContent extends React.Component {
       </TouchableOpacity>
     )
   }
+
   render () {
     const LIST_MENU = [
       { id: 0, title: 'LIÊN HỆ', icon: icContact('gray') },
-      { id: 1, title: 'CẬP NHẬT', icon: <Image style={{width: 32, height: 32}} source={Images.icUpdate}/> }
+      { id: 1, title: 'CẬP NHẬT', icon: <Image style={{ width: 32, height: 32 }} source={Images.icUpdate}/> }
     ]
     return (
       <View style={[styles.container]}>

@@ -37,7 +37,7 @@ export default (state, action) => {
     if (lastRoute.routeName === RouteKey.HomeScreen) {
       return state
     }
-    const newState = RootNavigator.router.getStateForAction(StackActions.popToTop({immediate: true}), state)
+    const newState = RootNavigator.router.getStateForAction(StackActions.popToTop({ immediate: true }), state)
     return (newState || state)
   }
 

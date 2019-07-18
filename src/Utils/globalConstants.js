@@ -1,5 +1,4 @@
 import DeviceInfo from 'react-native-device-info'
-import Images from 'assets/Images'
 
 // const ProductUrl = 'https://prd-luyenthi-api.generali-life.com.vn'
 const UATUrl = 'https://uat-luyenthi-api.generali-life.com.vn'
@@ -7,7 +6,7 @@ const UATUrl = 'https://uat-luyenthi-api.generali-life.com.vn'
 export const BaseURL = process.env['NODE_ENV'] === 'development' ? UATUrl : UATUrl
 
 export const RouteKey = {
-  HomeScreen: 'HomeScreen',
+  HomeScreen: 'HomeScreen'
 }
 export const KeyStore = {
   USER_DATA: 'USER_DATA'
@@ -21,6 +20,7 @@ export const actionsType = {
 
   SHOW_NOTIFICATION: 'SHOW_NOTIFICATION',
   OFF_NOTIFICATION: 'OFF_NOTIFICATION',
+  UPDATE_APP_STATUS: 'UPDATE_APP_STATUS',
 
   // Prompt
   UPDATE_PROMPT: 'UPDATE_PROMPT',

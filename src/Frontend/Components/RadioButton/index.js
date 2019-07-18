@@ -51,11 +51,14 @@ export default class RadioForm extends React.Component {
     }
     this._renderButton = this._renderButton.bind(this)
   }
+
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps (nextProps) {
     if (nextProps.initial !== this.state.is_active_index) {
       this.setState({ is_active_index: nextProps.initial })
     }
   }
+
   updateIsActiveIndex (index) {
     this.setState({ is_active_index: index })
     this.props.onPress(this.props.radio_props[index], index)
@@ -119,15 +122,18 @@ export class RadioButton extends React.Component {
     super(props)
     this.state = {}
   }
+
   shouldComponentUpdate (nextProps, nextState) {
     return true
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillUpdate () {
     if (this.props.animation && this.props.isAnimationAll) {
       LayoutAnimation.spring()
     }
   }
+
   render () {
     var c = this.props.children
     var testIDIndex = null
@@ -189,6 +195,7 @@ export class RadioButtonInput extends React.Component {
       buttonColor: props.buttonColor || '#2196f3'
     }
   }
+
   render () {
     var innerSize = { width: 15, height: 15, borderRadius: 15 / 2 }
     var outerSize = { width: 15 + 10, height: 15 + 10, borderRadius: (15 + 10) / 2 }
@@ -270,6 +277,7 @@ export class RadioButtonLabel extends React.Component {
       buttonColor: '#2196f3'
     }
   }
+
   render () {
     return (
       <TouchableWithoutFeedback

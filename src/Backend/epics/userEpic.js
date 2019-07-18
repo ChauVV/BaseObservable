@@ -25,7 +25,7 @@ export default (action$, store, dependencies) => {
             } else {
               return Observable.concat(
                 Observable.of({ type: actionsType.USER_REGISTOR_SUCCESS, payload: response.data.data }).delay(100),
-                Observable.of({ type: actionsType.PUSH, routeName: RouteKey.Verify, params: {email: action.payload.email} })
+                Observable.of({ type: actionsType.PUSH, routeName: RouteKey.Verify, params: { email: action.payload.email } })
               )
             }
           } else {

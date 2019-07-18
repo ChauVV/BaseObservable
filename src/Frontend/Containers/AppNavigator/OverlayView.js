@@ -1,3 +1,4 @@
+/* eslint-disable react/no-deprecated */
 
 import React, { PureComponent } from 'react'
 import {
@@ -13,6 +14,7 @@ class OverlayView extends PureComponent {
   state={
     animatedValue: new Animated.Value(0)
   }
+
   componentWillReceiveProps (nextProps) {
     if (nextProps.prompt.isShow !== this.props.prompt.isShow) {
       Animated.sequence([
@@ -28,6 +30,7 @@ class OverlayView extends PureComponent {
       ]).start()
     }
   }
+
   render () {
     const {
       internet, appStatus, prompt

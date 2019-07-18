@@ -8,7 +8,7 @@ import OverlayView from 'frontend/Containers/AppNavigator/OverlayView'
 const App = () => {
   return (
     <Provider store={storeRedux}>
-      <View style={{flex: 1}}>
+      <View style={{ flex: 1 }}>
         <AppNavigator/>
         <OverlayView/>
       </View>

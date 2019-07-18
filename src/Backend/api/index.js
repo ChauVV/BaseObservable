@@ -22,7 +22,7 @@ export default class ServerApi {
       'Content-Type': 'application/json'
     }
 
-    const data = {email}
+    const data = { email }
     console.log('url: ', url)
     return post(url, data, header)
   }
@@ -33,7 +33,7 @@ export default class ServerApi {
     const header = {
       'Content-Type': 'application/json'
     }
-    const data = {email, code}
+    const data = { email, code }
     console.log('url: ', url)
     return post(url, data, header)
   }
